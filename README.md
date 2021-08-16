@@ -12,6 +12,7 @@ http://localhost:8080/contacts/
         "id": 1,
         "firstName": "Bilbo",
         "lastName": "Baggins",
+        "phone": "123456987",
         "email": "bil@bibl.bil",
         "position": "burglar",
         "name": "Bilbo Baggins",
@@ -28,6 +29,7 @@ http://localhost:8080/contacts/
         "id": 2,
         "firstName": "Frodo",
         "lastName": "Baggins",
+        "phone": "236589956",
         "email": "frod@frod.fr",
         "position": "thief",
         "name": "Frodo Baggins",
@@ -60,6 +62,7 @@ which returns
   "id": 3,
   "firstName": "Samwise",
   "lastName": "Gamgee",
+  "phone": null,
   "email": "sam@sam.sm",
   "position": "gardener",
   "name": "Samwise Gamgee",
@@ -76,7 +79,7 @@ which returns
 
 ## update a contact:
 ```bash
-curl -X PUT localhost:8080/contacts/3 -H 'Content-type:application/json' -d '{"name": "Updated Contact", "email": "new@email.new", "position": "New Potistion"}'
+curl -X PUT localhost:8080/contacts/3 -H 'Content-type:application/json' -d '{"name": "Updated Contact", "phone":"888888888","email": "new@email.new", "position": "New Potistion"}'
 ```
 which returns
 ```bash
@@ -84,6 +87,7 @@ which returns
   "id": 3,
   "firstName": "Updated",
   "lastName": "Contact",
+  "phone": "888888888",
   "email": "new@email.new",
   "position": "New Potistion",
   "name": "Updated Contact",
@@ -121,6 +125,7 @@ Could not find contact 3
         "id": 1,
         "firstName": "Bilbo",
         "lastName": "Baggins",
+        "phone": "123456987",
         "email": "bil@bibl.bil",
         "position": "burglar",
         "name": "Bilbo Baggins",
